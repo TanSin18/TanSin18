@@ -53,5 +53,5 @@ The best ideas usually happen on long walks, not at my desk.
 <p align="center">
   <i>Always interested in real-time ML, Databricks infrastructure, and applied deep learning.</i><br><br>
   ☕ <b>Let’s talk about what’s actually working.</b><br><br>
-  <a href="#">LinkedIn</a> • <a href="#">GitHub</a>
+  <a href="#">[LinkedIn](https://www.linkedin.com/in/tanmay-sinnarkar/)</a> 
 </p>
