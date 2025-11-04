@@ -88,10 +88,7 @@
 
 ---
 
-<p align="center">
-  <i>“Let’s talk about what’s actually working.”</i><br>
-  <b>— Tanmay Sinnarkar</b>
-</p>
+
 
 ---
 
