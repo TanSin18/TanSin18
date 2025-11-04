@@ -96,8 +96,5 @@
 
 <!-- Optional: Dark gradient background (GitHub-safe) -->
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/wave-dark.svg" width="100%" alt="wave divider">
-</p>
-```
+
 
