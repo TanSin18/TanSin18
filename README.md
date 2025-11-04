@@ -4,7 +4,6 @@
 <p align="center">
   <b>Senior Data Scientist · Fluent Inc · NYC 🗽</b><br>
   Designing adaptive machine learning systems for large-scale digital advertising.<br>
-  Turning 50M+ daily events into real-time, revenue-driven intelligence.
 </p>
 
 ---
@@ -35,16 +34,6 @@
 
 ---
 
-### 🧬 What I Build
-
-```text
-[01] Adaptive Bidding Systems         ->  Revenue-aware real-time models
-[02] Ranking Models & Recommenders    ->  Contextual, latency-safe architectures
-[03] Infrastructure That Lasts        ->  Observability, MLflow governance, and traceability
-[04] Experimentation Engines          ->  Exploration–exploitation balance at production scale
-````
-
----
 
 ### 🔍 Prior Work
 
@@ -55,14 +44,6 @@
 
 ---
 
-### 🌱 Principles I Work By
-
-> ⚖️ *Balance exploration and exploitation*
-> 🧩 *Design systems that scale before they shine*
-> 🧠 *Measure twice, deploy once*
-> 🌲 *Great infra makes great models possible*
-
----
 
 ### ☕ Outside Work
 
