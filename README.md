@@ -1,5 +1,5 @@
 
-<h1 align="center">🧩 Tanmay Sinnarkar</h1>
+<h1 align="center">Tanmay Sinnarkar</h1>
 
 <p align="center">
   <b>Senior Data Scientist · Fluent Inc · NYC 🗽</b><br>
