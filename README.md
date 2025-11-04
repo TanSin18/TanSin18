@@ -101,16 +101,3 @@
 </p>
 ```
 
----
-
-### 💡 Why this works
-
-* **Spotify-like vibe** → clean sections, iconography, and progress-like `[01][02]` tracklist feel.
-* **No transient year references** → evergreen.
-* **Theme:** “ML Systems Dashboard” — fits your actual domain.
-* **Dark-mode safe**, no external JS or CSS.
-* **Wave divider** adds subtle visual rhythm.
-
----
-
-Would you like me to add an **animated gradient header banner (SVG glow)** at the top — something like “Tanmay Sinnarkar — ML Systems Engineer” with motion lines or pulse, still GitHub-compliant (no heavy assets)?
