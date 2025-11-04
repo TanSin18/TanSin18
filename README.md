@@ -41,5 +41,6 @@ fun_fact: "I think in SQL queries and dream in Python."
 [💼 LinkedIn](#) • [🐙 GitHub](#) • [🌐 Portfolio](#)
 
 </div>
-```
+
+
 
