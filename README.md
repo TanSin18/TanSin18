@@ -1,46 +1,57 @@
-
-<h1 align="center">⚡ Tanmay Sinnarkar</h1>
+<h1 align="center">Tanmay Sinnarkar</h1>
 
 <p align="center">
-  <b>Senior Data Scientist @ Fluent Inc.</b>  
-  🧠 Building real-time ML systems that process <b>50M+ events/day</b>  
-  ⚙️ Ranking • Bidding • Forecasting • Optimization • NYC 🗽
+  <b>Senior Data Scientist · Fluent Inc · NYC 🗽</b><br>
+  Building large-scale machine learning systems for digital advertising.<br>
+  Turning 50M+ daily events into adaptive, revenue-driven intelligence.
 </p>
 
-<div align="center">
+---
 
-```ascii
-╔══════════════════════════════════════════════════════════════════╗
-║     Machine Learning × Big Data × Real-Time Intelligence         ║
-╚══════════════════════════════════════════════════════════════════╝
-````
+### About
 
-</div>
+I design and deploy **production ML systems** that optimize decisions in real time.  
+My work spans **ranking models**, **bidding algorithms**, and **recommendation engines** —  
+all serving at sub-second latency on the **Databricks** platform.
 
-```yaml
-role: Senior Data Scientist
-company: Fluent Inc
-location: New York City
-impact: 50M+ daily events processed
-mission: Build adaptive ML systems that learn from every click
-stack: [PySpark, XGBoost, MLflow, Databricks, Prophet, TensorFlow, Docker, AWS]
-focus:
-  - real_time_ranking: Adaptive ad ranking models
-  - bid_optimization: Exploration–exploitation at scale
-  - forecasting_engine: Event-aware time series modeling
-  - mlops_pipeline: Automated retraining & deployment
-philosophy: "Machine Learning isn't magic—it's engineering that learns."
-fun_fact: "I think in SQL queries and dream in Python."
-```
+Recent projects improved network performance by **16%**, translating directly to measurable revenue.  
+Most of my day revolves around **feature engineering at scale** (100+ attributes on Delta Lake),  
+**exploration–exploitation systems** using **Thompson Sampling**, and  
+**dynamic bidding** with **PID control loops** for stability under traffic shifts.
 
-<div align="center">
+I care deeply about building **ML infrastructure that lasts** —  
+observability pipelines, reproducible experiments, and governed deployment via **MLflow**.
 
-> 🧩 Build Fast • 📊 Measure Everything • 🔁 Iterate Relentlessly
-> 💬 Open to collaboration on production ML, real-time inference, and revenue optimization
+---
 
-[💼 LinkedIn](#) • [🐙 GitHub](#) • [🌐 Portfolio](#)
+### Core Stack
 
-</div>
+**Databricks** · **PySpark** · **MLflow** · **XGBoost** · **TensorFlow** · **Prophet**  
+**Delta Lake** · **AWS / GCP** · **SQL** · **Python**
 
+---
 
+### Prior Work
 
+Previously at **Bed Bath & Beyond**, I built:
+- Uplift modeling for personalized promotions  
+- Collaborative filtering recommenders on 50M+ transactions  
+- Churn prediction using survival analysis  
+
+We proved — through experimentation — that digital channels could outperform direct mail.  
+
+---
+
+### Outside Work
+
+I sing and produce music, hike when I can get out of the city,  
+and run a small data science book club with coworkers.  
+The best ideas usually happen on long walks, not at my desk.
+
+---
+
+<p align="center">
+  <i>Always interested in real-time ML, Databricks infrastructure, and applied deep learning.</i><br><br>
+  ☕ <b>Let’s talk about what’s actually working.</b><br><br>
+  <a href="#">LinkedIn</a> • <a href="#">GitHub</a>
+</p>
