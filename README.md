@@ -21,4 +21,12 @@ company: Fluent Inc
 location: New York City
 impact: 50M+ daily events processed
 mission: Build adaptive ML systems that learn from every click
-languages: [Python, SQL, English, Hindi, Marathi, Spanish]
+stack: [PySpark, XGBoost, MLflow, Databricks, Prophet, TensorFlow, Docker, AWS]
+focus:
+  - real_time_ranking: Adaptive ad ranking models
+  - bid_optimization: Exploration–exploitation at scale
+  - forecasting_engine: Event-aware time series modeling
+  - mlops_pipeline: Automated retraining & deployment
+philosophy: "Machine Learning isn't magic—it's engineering that learns."
+fun_fact: "I think in SQL queries and dream in Python."
+
