@@ -67,13 +67,7 @@
   </a>
 </p>
 
----
 
-
-
----
-
-<!-- Optional: Dark gradient background (GitHub-safe) -->
 
 
 
