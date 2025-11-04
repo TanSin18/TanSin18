@@ -67,9 +67,10 @@
 ### ☕ Outside Work
 
 <p align="center">
-  I make music, hike when I can escape the city,  
-  and run a data science book club with coworkers.  
-  Most good ideas start as voice notes or sketches, not notebooks.
+ I love exploring new coffee spots around NYC, doodling,  
+ and getting lost in great movie plots and stories.  
+ I sing occasionally and once tried making my own tracks,  
+ but my passion for building things with data usually wins out.
 </p>
 
 ---
