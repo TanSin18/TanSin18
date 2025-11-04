@@ -1,10 +1,20 @@
-- 👋 Hi, I’m @Tanmay
-- 👀 I’m interested in Machine Learning and Data Science
-- 🌱 I’m currently learning NLP and DNN
-- 💞️ I’m looking to collaborate on finding innovative solutions for digital marketing using Data Science
-- 📫 How to reach me tanu.sinnarkar@gmail.com
+<h1 align="center">👋 Hey, I'm Tanmay Singh</h1>
 
-<!---
-TanSin18/TanSin18 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+<p align="center">
+  <b>Senior Data Scientist @ Fluent Inc.</b><br>
+  Building <i>real-time ML systems</i> that process <b>50M+ events/day</b> and optimize ad revenue in the wild.
+</p>
+
+---
+
+### 🧠 About Me
+
+- ⚙️ Designing **ranking models**, **bidding engines**, and **exploration–exploitation systems**  
+- ⚡ Deploying production pipelines on **Databricks** & **Spark**  
+- 💡 Focused on **real-time learning**, **forecasting**, and **automated optimization**  
+- 📍 Based in **NYC**, blending ML research with business impact  
+
+```ascii
+╔════════════════════════════════════════════════════════╗
+║   Data → Insight → Decision → Revenue → Reinforcement  ║
+╚════════════════════════════════════════════════════════╝
