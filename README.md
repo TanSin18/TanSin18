@@ -26,11 +26,11 @@
 
 | Capability | Description |
 |-------------|--------------|
-| 🏎 **Real-Time Ranking** | Sub-second decisions optimized for CTR, RPS, and stability |
-| 🔁 **Dynamic Bidding Engine** | PID control loops balancing revenue vs. volatility |
-| 🎯 **Exploration–Exploitation Systems** | Thompson Sampling + contextual exploration |
-| 🧩 **Feature Engineering @ Scale** | 100+ attributes across Delta Lake and Databricks pipelines |
-| 📊 **Governed ML Ops** | MLflow-based reproducibility, versioning, and monitoring |
+| 🏎 **Real-Time Ranking** | Makes instant ad decisions that balance click rate, revenue, and stability |
+| 🔁 **Dynamic Bidding Engine** | Automatically adjusts bids to maximize returns and reduce volatility |
+| 🎯 **Exploration–Exploitation Systems** | Learns from both new and proven strategies to keep performance improving |
+| 🧩 **Feature Engineering @ Scale** | Builds 100+ data features from user behavior and campaign data efficiently |
+| 📊 **Governed ML Ops** | Ensures every model version, run, and metric is tracked and reproducible |
 
 ---
 
