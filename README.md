@@ -1,73 +1,111 @@
 
+<!-- ========================================================= -->
+<!-- ░▒▓  T A N M A Y   S I N N A R K A R  ▓▒░ -->
+<!-- ========================================================= -->
+
 <h1 align="center">Tanmay Sinnarkar</h1>
 
 <p align="center">
-  <b>Senior Data Scientist · Fluent Inc · NYC 🗽</b><br>
-  Designing adaptive machine learning systems for large-scale digital advertising.<br>
+  <b>Senior Data Scientist · Fluent Inc · New York City</b><br>
+  Designing adaptive ML systems that make <b>50M+</b> decisions a day.
 </p>
 
 ---
 
-### ⚙️ Core Stack
+## I. About
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Databricks-EF3434?style=for-the-badge&logo=databricks&logoColor=white"/>
-  <img src="https://img.shields.io/badge/PySpark-FDEE21?style=for-the-badge&logo=apache-spark&logoColor=black"/>
-  <img src="https://img.shields.io/badge/MLflow-0194E2?style=for-the-badge&logo=mlflow&logoColor=white"/>
-  <img src="https://img.shields.io/badge/XGBoost-FF6600?style=for-the-badge&logoColor=white"/>
-  <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Delta Lake-0E8A16?style=for-the-badge&logo=databricks&logoColor=white"/>
-  <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white"/>
-</p>
+I build **machine learning systems for digital advertising at scale** — systems that learn, decide,  
+and optimize in real time.  
+
+At Fluent, my focus lies at the intersection of **ranking**, **bidding**, and **exploration**,  
+where every millisecond decision shapes revenue and user experience.  
+
+> Precision, adaptability, and feedback loops — that’s my design philosophy.
 
 ---
 
-### 🧠 System Summary
+## II. Core Stack
 
-| Capability | Description |
-|-------------|--------------|
-| 🏎 **Real-Time Ranking** | Makes instant ad decisions that balance click rate, revenue, and stability |
-| 🔁 **Dynamic Bidding Engine** | Automatically adjusts bids to maximize returns and reduce volatility |
-| 🎯 **Exploration–Exploitation Systems** | Learns from both new and proven strategies to keep performance improving |
-| 🧩 **Feature Engineering @ Scale** | Builds 100+ data features from user behavior and campaign data efficiently |
-| 📊 **Governed ML Ops** | Ensures every model version, run, and metric is tracked and reproducible |
+<div align="center">
 
----
+| Layer | Tools |
+|:------|:------|
+| **Languages** | Python · SQL · PySpark |
+| **Modeling** | XGBoost · TensorFlow · Scikit-learn |
+| **ML Ops** | MLflow · Databricks · Delta Lake |
+| **Infra** | AWS · S3 · Lambda |
+| **Experimentation** | A/B testing · Contextual Bandits |
 
-
-### 🔍 Prior Work
-
-* **Bed Bath & Beyond** — Uplift modeling for digital promotions
-  → Proved data-driven personalization could outperform direct mail.
-* **Collaborative Filtering Recommenders** on 50M+ transactions
-* **Churn Prediction** using survival analysis to optimize retention strategies
+</div>
 
 ---
 
+## III. Systems I Build
 
-### ☕ Outside Work
+<div align="center">
 
-<p align="center">
- I love exploring new coffee spots around NYC, doodling,  
- and getting lost in great movie plots and stories.  
- I sing occasionally and once tried making my own tracks,  
- but my passion for building things with data usually wins out.
-</p>
+```text
+┌─────────────────────────────────────────────┐
+│  REAL-TIME RANKING ENGINE                   │
+│     ▸ Balances CTR, RPS, and latency        │
+│                                             │
+│  ADAPTIVE BIDDING CONTROLLER                │
+│     ▸ Dynamic market-aware optimization     │
+│                                             │
+│  FEATURE FACTORY                            │
+│     ▸ 100+ engineered behavioral signals    │
+│                                             │
+│  EXPLORATION FRAMEWORK                      │
+│     ▸ Multi-armed bandits for continual     │
+│       learning & experimentation            │
+└─────────────────────────────────────────────┘
+````
+
+</div>
 
 ---
 
-### 🔗 Connect
+## IV. Experience Snapshot
 
-<p align="center">
-  <a href="https://www.linkedin.com/in/tanmay-sinnarkar/" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
-  </a>
-  <a href="https://github.com/tanmay-sinnarkar" target="_blank">
-    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
-  </a>
-</p>
+**Fluent Inc — Senior Data Scientist**
+Architecting adaptive systems for ad decisioning, model monitoring, and campaign optimization.
+Driving strategy around CTR prediction, eCPA stabilization, and feedback-driven learning loops.
 
+**Bed Bath & Beyond — Data Science (4 years)**
+Developed uplift models for promotions, collaborative filtering for 50M+ transactions,
+and churn models using survival analysis.
 
+---
 
+## V. Current Focus
 
+* Integrating **LLMs into ML pipelines** for feature ideation, documentation, and code generation
+* Prototyping **AI-assisted model governance** and observability dashboards
+* Automating **feature lineage and evaluation tracking** across experiments
+
+---
+
+## VI. Beyond Work
+
+NYC coffee chaser ☕. Sketcher. Film structure obsessive.
+Multilingual — English · Hindi · Marathi.
+Sometimes I sing; usually, I build.
+
+---
+
+<div align="center">
+
+<a href="https://www.linkedin.com/in/tanmay-sinnarkar/" target="_blank">
+  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
+</a>
+&nbsp;&nbsp;
+<a href="https://github.com/tanmay-sinnarkar" target="_blank">
+  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
+</a>
+
+<br><br> <sub><i>Let’s talk systems, data, or the perfect espresso.</i></sub>
+
+</div>
+
+<!-- ========================================================= -->
 
