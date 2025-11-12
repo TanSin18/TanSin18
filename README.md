@@ -1,111 +1,100 @@
-
-<!-- ========================================================= -->
-<!-- ░▒▓  T A N M A Y   S I N N A R K A R  ▓▒░ -->
-<!-- ========================================================= -->
+<!-- ╔══════════════════════════════════════════════════╗ -->
+<!--   T  A  N  M  A  Y   ·   S  I  N  N  A  R  K  A  R  -->
+<!-- ╚══════════════════════════════════════════════════╝ -->
 
 <h1 align="center">Tanmay Sinnarkar</h1>
 
 <p align="center">
-  <b>Senior Data Scientist · Fluent Inc · New York City</b><br>
-  Designing adaptive ML systems that make <b>50M+</b> decisions a day.
+  <b>Senior Data Scientist · Fluent Inc · NYC</b><br>
+  I design machine learning systems that learn from scale, act in real time, and never stop improving.
 </p>
 
 ---
 
-## I. About
+## About Me
 
-I build **machine learning systems for digital advertising at scale** — systems that learn, decide,  
-and optimize in real time.  
+I build intelligent systems that drive digital advertising at scale.  
+Every day, my models process millions of interactions, deciding which ad to show, how much to bid,  
+and when to explore new strategies.  
 
-At Fluent, my focus lies at the intersection of **ranking**, **bidding**, and **exploration**,  
-where every millisecond decision shapes revenue and user experience.  
+My work sits where **machine learning meets production engineering**:  
+rankers that think fast, bidders that adapt, and pipelines that stay honest through feedback.
 
-> Precision, adaptability, and feedback loops — that’s my design philosophy.
+> I believe good systems don’t just predict. They *learn to stay right*.
 
 ---
 
-## II. Core Stack
+## Core Toolkit
 
 <div align="center">
 
-| Layer | Tools |
-|:------|:------|
+| Domain | Tools |
+|:-------|:------|
 | **Languages** | Python · SQL · PySpark |
 | **Modeling** | XGBoost · TensorFlow · Scikit-learn |
 | **ML Ops** | MLflow · Databricks · Delta Lake |
-| **Infra** | AWS · S3 · Lambda |
-| **Experimentation** | A/B testing · Contextual Bandits |
+| **Infrastructure** | AWS · S3 · Lambda |
+| **Experimentation** | A/B Testing · Contextual Bandits |
 
 </div>
 
 ---
 
-## III. Systems I Build
+## Systems That Keep Me Up (In a Good Way)
 
 <div align="center">
 
-```text
-┌─────────────────────────────────────────────┐
-│  REAL-TIME RANKING ENGINE                   │
-│     ▸ Balances CTR, RPS, and latency        │
-│                                             │
-│  ADAPTIVE BIDDING CONTROLLER                │
-│     ▸ Dynamic market-aware optimization     │
-│                                             │
-│  FEATURE FACTORY                            │
-│     ▸ 100+ engineered behavioral signals    │
-│                                             │
-│  EXPLORATION FRAMEWORK                      │
-│     ▸ Multi-armed bandits for continual     │
-│       learning & experimentation            │
-└─────────────────────────────────────────────┘
-````
+<table>
+<tr><td><b>Real-Time Ranking</b><br>Scoring pipelines that balance click-through rate, revenue, and latency — all under 100 ms.</td></tr>
+<tr><td><b>Adaptive Bidding</b><br>Market-aware controllers that adjust campaign spend dynamically.</td></tr>
+<tr><td><b>Feature Factory</b><br>Automated generation of 100+ behavioral and campaign-level features.</td></tr>
+<tr><td><b>Exploration Framework</b><br>Contextual bandit systems that turn experimentation into continuous learning.</td></tr>
+</table>
 
 </div>
 
 ---
 
-## IV. Experience Snapshot
+## Experience
 
-**Fluent Inc — Senior Data Scientist**
-Architecting adaptive systems for ad decisioning, model monitoring, and campaign optimization.
-Driving strategy around CTR prediction, eCPA stabilization, and feedback-driven learning loops.
+**Fluent Inc · Senior Data Scientist**  
+Building adaptive optimization engines that power Fluent’s advertising marketplace.  
+From model governance to real-time feedback loops, my work connects research, data, and performance.  
 
-**Bed Bath & Beyond — Data Science (4 years)**
-Developed uplift models for promotions, collaborative filtering for 50M+ transactions,
-and churn models using survival analysis.
-
----
-
-## V. Current Focus
-
-* Integrating **LLMs into ML pipelines** for feature ideation, documentation, and code generation
-* Prototyping **AI-assisted model governance** and observability dashboards
-* Automating **feature lineage and evaluation tracking** across experiments
+**Bed Bath & Beyond · Data Scientist**  
+Developed uplift models for digital promotions, recommender systems for 50 M+ transactions,  
+and churn prediction models for customer retention initiatives.  
 
 ---
 
-## VI. Beyond Work
+## Currently Exploring
 
-NYC coffee chaser ☕. Sketcher. Film structure obsessive.
-Multilingual — English · Hindi · Marathi.
-Sometimes I sing; usually, I build.
+- Integrating large-language-model tools into data science workflows for faster prototyping and debugging  
+- Designing better monitoring and explainability systems for deployed ML models  
+- Automating feature lineage tracking and evaluation across experiments  
+
+---
+
+## Outside Work
+
+I’m usually wandering through NYC coffee shops, sketching product ideas,  
+or decoding film structures the way I dissect model behavior.  
+Trilingual: English · Hindi · Marathi.  
+Sometimes I sing, but mostly I build.
 
 ---
 
 <div align="center">
 
 <a href="https://www.linkedin.com/in/tanmay-sinnarkar/" target="_blank">
-  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
+  <img src="https://img.shields.io/badge/LinkedIn-005C9C?style=for-the-badge&logo=linkedin&logoColor=white"/>
 </a>
 &nbsp;&nbsp;
 <a href="https://github.com/tanmay-sinnarkar" target="_blank">
-  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
+  <img src="https://img.shields.io/badge/GitHub-1B1F23?style=for-the-badge&logo=github&logoColor=white"/>
 </a>
 
-<br><br> <sub><i>Let’s talk systems, data, or the perfect espresso.</i></sub>
+<br><br>
+<sub><i>Always up for conversations about systems, learning loops, or great espresso.</i></sub>
 
 </div>
-
-<!-- ========================================================= -->
-
