@@ -1,100 +1,89 @@
-<!-- ╔══════════════════════════════════════════════════╗ -->
-<!--   T  A  N  M  A  Y   ·   S  I  N  N  A  R  K  A  R  -->
-<!-- ╚══════════════════════════════════════════════════╝ -->
+# Tanmay Sinnarkar
 
-<h1 align="center">Tanmay Sinnarkar</h1>
+**Senior Data Scientist @ Fluent Inc · NYC**
 
-<p align="center">
-  <b>Senior Data Scientist · Fluent Inc · NYC</b><br>
-  I design machine learning systems that learn from scale, act in real time, and never stop improving.
-</p>
+I build production ML systems that process **50M+ daily decisions** in real-time advertising.  
+My work: **ranking algorithms**, **budget optimization engines**, and **exploration frameworks** that turn data into revenue.
 
 ---
 
-## About Me
+## What I Build
 
-I build intelligent systems that drive digital advertising at scale.  
-Every day, my models process millions of interactions, deciding which ad to show, how much to bid,  
-and when to explore new strategies.  
+**Real-Time ML Systems**  
+Sub-400ms ranking pipelines serving 50M+ daily impressions. Every prediction matters when you're processing millions of ad decisions per day.
 
-My work sits where **machine learning meets production engineering**:  
-rankers that think fast, bidders that adapt, and pipelines that stay honest through feedback.
+**Adaptive Optimization**  
+PID-based budget controllers that dynamically adjust bids across 200+ campaigns. Systems that don't just predict—they adapt and optimize continuously.
 
-> I believe good systems don’t just predict. They *learn to stay right*.
+**Exploration at Scale**  
+Thompson Sampling and UCB frameworks that balance exploration vs exploitation, finding optimal strategies 3× faster while protecting revenue.
 
----
-
-## Core Toolkit
-
-<div align="center">
-
-| Domain | Tools |
-|:-------|:------|
-| **Languages** | Python · SQL · PySpark |
-| **Modeling** | XGBoost · TensorFlow · Scikit-learn |
-| **ML Ops** | MLflow · Databricks · Delta Lake |
-| **Infrastructure** | AWS · S3 · Lambda |
-| **Experimentation** | A/B Testing · Contextual Bandits |
-
-</div>
+**Audience Intelligence**  
+Recursive segmentation engines (Audience Miner 2.0) that discover high-value segments automatically, enabling 20-40% ROI improvements through data-driven targeting.
 
 ---
 
-## Systems That Keep Me Up (In a Good Way)
+## Tech Stack
 
-<div align="center">
-
-<table>
-<tr><td><b>Real-Time Ranking</b><br>Scoring pipelines that balance click-through rate, revenue, and latency — all under 100 ms.</td></tr>
-<tr><td><b>Adaptive Bidding</b><br>Market-aware controllers that adjust campaign spend dynamically.</td></tr>
-<tr><td><b>Feature Factory</b><br>Automated generation of 100+ behavioral and campaign-level features.</td></tr>
-<tr><td><b>Exploration Framework</b><br>Contextual bandit systems that turn experimentation into continuous learning.</td></tr>
-</table>
-
-</div>
+**ML & Data**: Python · PySpark · XGBoost · TensorFlow · Prophet · MLflow  
+**Platforms**: Databricks · Delta Lake · AWS (S3, Athena, Sagemaker) · GCP (BigQuery, Vertex AI)  
+**Methods**: Thompson Sampling · Multi-Armed Bandits · A/B Testing · Time Series Forecasting · Causal Inference
 
 ---
 
-## Experience
+## Impact
 
-**Fluent Inc · Senior Data Scientist**  
-Building adaptive optimization engines that power Fluent’s advertising marketplace.  
-From model governance to real-time feedback loops, my work connects research, data, and performance.  
+- **$11M+ revenue** delivered through ML optimization systems
+- **50M+ daily impressions** processed with sub-400ms latency
+- **17 production models** deployed and continuously improved
+- **6 data scientists** mentored, reducing onboarding time from 3 months to 6 weeks
 
-**Bed Bath & Beyond · Data Scientist**  
-Developed uplift models for digital promotions, recommender systems for 50 M+ transactions,  
-and churn prediction models for customer retention initiatives.  
+---
+
+## Previously
+
+**Bed Bath & Beyond** · Data Scientist (2018-2022)  
+Built coupon propensity systems saving $2-5M annually, trade area analysis for 800+ stores using geospatial ML, and recommendation engines processing 50M+ transactions.
 
 ---
 
 ## Currently Exploring
 
-- Integrating large-language-model tools into data science workflows for faster prototyping and debugging  
-- Designing better monitoring and explainability systems for deployed ML models  
-- Automating feature lineage tracking and evaluation across experiments  
+- **LLM-assisted workflows** for faster ML prototyping and debugging
+- **Real-time feature stores** with lineage tracking across experiments  
+- **Causal inference** methods for better experimentation
 
 ---
 
-## Outside Work
+## Open Source & Projects
 
-I’m usually wandering through NYC coffee shops, sketching product ideas,  
-or decoding film structures the way I dissect model behavior.  
-Trilingual: English · Hindi · Marathi.  
-Sometimes I sing, but mostly I build.
+🚀 **Audience Miner 2.0** - Production-ready audience segmentation platform  
+📊 **ML Experiment Framework** - Databricks-native A/B testing infrastructure  
+🎯 **Budget Optimizer** - PID-based bidding system with session forecasting
+
+*Selected repos showcase production ML patterns, not just academic exercises.*
 
 ---
 
-<div align="center">
+## Beyond Code
 
-<a href="https://www.linkedin.com/in/tanmay-sinnarkar/" target="_blank">
-  <img src="https://img.shields.io/badge/LinkedIn-005C9C?style=for-the-badge&logo=linkedin&logoColor=white"/>
-</a>
-&nbsp;&nbsp;
-<a href="https://github.com/tanmay-sinnarkar" target="_blank">
-  <img src="https://img.shields.io/badge/GitHub-1B1F23?style=for-the-badge&logo=github&logoColor=white"/>
-</a>
+Coffee aficionado exploring NYC's best espresso bars.  
+Film buff analyzing narrative structures like ML architectures.  
+Trilingual: English · Hindi · Marathi.
 
-<br><br>
-<sub><i>Always up for conversations about systems, learning loops, or great espresso.</i></sub>
+Co-lead company movie and book club. Active in DEI initiatives.  
+Occasionally sing, constantly build.
 
-</div>
+---
+
+## Let's Connect
+
+💼 [LinkedIn](https://www.linkedin.com/in/tanmay-sinnarkar/)  
+📧 tanu.sinnarkar@gmail.com  
+📍 New York City Metro Area
+
+> *I believe the best ML systems don't just predict—they learn to stay right through continuous feedback loops.*
+
+---
+
+<sub>**Current Focus**: Building systems that scale, adapt, and optimize in real-time. Always interested in conversations about production ML, experimentation frameworks, or exceptional coffee.</sub>
