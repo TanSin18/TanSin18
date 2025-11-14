@@ -31,14 +31,6 @@ Recursive segmentation engines (Audience Miner 2.0) that discover high-value seg
 
 ---
 
-## Impact
-
-- **$11M+ revenue** delivered through ML optimization systems
-- **50M+ daily impressions** processed with sub-400ms latency
-- **17 production models** deployed and continuously improved
-- **6 data scientists** mentored, reducing onboarding time from 3 months to 6 weeks
-
----
 
 ## Previously
 
