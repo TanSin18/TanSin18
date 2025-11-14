@@ -62,8 +62,6 @@ Built coupon propensity systems saving $2-5M annually, trade area analysis for 8
 Coffee aficionado exploring NYC's best espresso bars.  
 Film buff analyzing narrative structures like ML architectures.  
 Trilingual: English · Hindi · Marathi.
-
-Co-lead company movie and book club. Active in DEI initiatives.  
 Occasionally sing, constantly build.
 
 ---
