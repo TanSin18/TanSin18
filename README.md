@@ -45,15 +45,6 @@ Built coupon propensity systems saving $2-5M annually, trade area analysis for 8
 - **Real-time feature stores** with lineage tracking across experiments  
 - **Causal inference** methods for better experimentation
 
----
-
-## Open Source & Projects
-
-🚀 **Audience Miner 2.0** - Production-ready audience segmentation platform  
-📊 **ML Experiment Framework** - Databricks-native A/B testing infrastructure  
-🎯 **Budget Optimizer** - PID-based bidding system with session forecasting
-
-*Selected repos showcase production ML patterns, not just academic exercises.*
 
 ---
 
