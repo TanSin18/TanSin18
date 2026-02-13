@@ -1,327 +1,327 @@
-<!-- Header -->
 <div align="center">
-  
-```
- ████████╗ █████╗ ███╗   ██╗███╗   ███╗ █████╗ ██╗   ██╗
- ╚══██╔══╝██╔══██╗████╗  ██║████╗ ████║██╔══██╗╚██╗ ██╔╝
-    ██║   ███████║██╔██╗ ██║██╔████╔██║███████║ ╚████╔╝ 
-    ██║   ██╔══██║██║╚██╗██║██║╚██╔╝██║██╔══██║  ╚██╔╝  
-    ██║   ██║  ██║██║ ╚████║██║ ╚═╝ ██║██║  ██║   ██║   
-    ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   
-```
 
-**Senior Data Scientist** · Building ML systems that make 50M+ decisions/day
+<img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=500&size=24&pause=1000&color=6B7280&center=true&vCenter=true&random=false&width=435&lines=tanmay+sinnarkar" alt="name" />
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/tanmay-sinnarkar/)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:tanu.sinnarkar@gmail.com)
-[![Location](https://img.shields.io/badge/NYC-FF6F00?style=for-the-badge&logo=google-maps&logoColor=white)]()
+**data scientist · nyc**
+
+*ranking systems · exploration problems · ml in production*
+
+<br/>
+
+[<img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" height="25"/>](https://www.linkedin.com/in/tanmay-sinnarkar/)
+&nbsp;
+[<img src="https://img.shields.io/badge/email-%23EA4335.svg?&style=for-the-badge&logo=gmail&logoColor=white" height="25"/>](mailto:tanu.sinnarkar@gmail.com)
 
 </div>
 
----
+<br/>
 
-## The Problem I Solve
-
-```
-┌─────────────────────────────────────────────────────────────────────────┐
-│                                                                         │
-│   User completes purchase                                               │
-│            │                                                            │
-│            ▼                                                            │
-│   ┌─────────────────┐                                                   │
-│   │  ~400ms window  │  ◄── This is where I live                        │
-│   └─────────────────┘                                                   │
-│            │                                                            │
-│            ▼                                                            │
-│   Show the right ad from 200+ campaigns                                 │
-│            │                                                            │
-│            ▼                                                            │
-│   50M+ times per day                                                    │
-│                                                                         │
-└─────────────────────────────────────────────────────────────────────────┘
-```
-
-Get it wrong = wasted impression. Get it right = everyone wins.
-
----
-
-## 🏗️ The System I Built
+## · what i work on ·
 
 <table>
 <tr>
-<td width="50%">
-
-### The Ranking Pipeline
+<td width="55%">
 
 ```
-                    ┌─────────────┐
-   Session Data ───►│ Click Model │───► pCTR
-                    │  (XGBoost)  │
-                    └─────────────┘
-                           │
-                           │ parallel
-                           │
-                    ┌─────────────┐
-   User Features ──►│ Conv Model  │───► pCVR
-                    │  (XGBoost)  │
-                    └─────────────┘
-                           │
-                           ▼
-                    ┌─────────────┐
-                    │   RANKER    │
-                    │             │
-                    │ RPI = pCTR  │
-                    │    × bid    │
-                    │ × (1-scrub) │
-                    └─────────────┘
-                           │
-                           ▼
-                    Sorted Creatives
+    user finishes checkout
+             │
+             ▼
+    ╭─────────────────╮
+    │  which ad next? │
+    ╰─────────────────╯
+             │
+             ▼
+    somewhere here, our
+    ranking system runs
+             │
+             ▼
+    (harder than it sounds)
 ```
 
 </td>
-<td width="50%">
+<td width="45%">
 
-### What Each Piece Does
+Ad ranking for post-transaction placements.
 
-**Click Model (pCTR)**
-> *"Will this user engage?"*
-> 
-> 30+ features: demographics, behavior, context
-
-**Conversion Model (pCVR)**
-> *"Will they convert if they click?"*
-> 
-> Enables ML-driven bid pricing
-
-**Ranker**
-> *"Which creative maximizes value?"*
-> 
-> The equation that decides everything
-
-Built from scratch. Took ownership from legacy platform. Now processes every ad decision.
+The interesting part isn't predicting clicks—it's everything around it: exploration vs exploitation, feedback loops, knowing when to retrain.
 
 </td>
 </tr>
 </table>
 
----
+<br/>
 
-## 🔬 The Nerdy Details
-
-<details>
-<summary><b>📊 Feature Engineering (30+ signals)</b></summary>
-
-```
-┌──────────────────────────────────────────────────────────────┐
-│                        FEATURE SPACE                         │
-├──────────────────┬──────────────────┬───────────────────────┤
-│   DEMOGRAPHIC    │    BEHAVIORAL    │      CONTEXTUAL       │
-├──────────────────┼──────────────────┼───────────────────────┤
-│ • Age            │ • Click history  │ • Hour of day         │
-│ • Gender         │ • View recency   │ • Local hour          │
-│ • Household $    │ • Campaign CTR   │ • Position (1-4)      │
-│ • State (zip)    │ • Time since     │ • OS / Device         │
-│ • Experian data  │   last action    │ • Creative ID         │
-└──────────────────┴──────────────────┴───────────────────────┘
-```
-
-</details>
-
-<details>
-<summary><b>🔄 Model Evolution (8+ versions)</b></summary>
-
-```
-v1 ──► v2 ──► v3 ──► ... ──► v8
- │      │      │              │
- │      │      │              └─ Dynamic lookback windows
- │      │      └─ Geographic enrichment
- │      └─ Behavioral signals
- └─ Basic demographics
-
-Each iteration: better features, lower log loss, same latency constraint
-```
-
-</details>
-
-<details>
-<summary><b>🎰 Exploration Framework (Thompson Sampling)</b></summary>
-
-```
-The Cold Start Problem:
-━━━━━━━━━━━━━━━━━━━━━━━
-
-New Campaign ──► No data ──► Show it anyway? ──► Risk revenue
-                    │
-                    └──► Don't show? ──► Never learn
-
-Solution:
-━━━━━━━━━
-
-┌─────────────────────────────────────┐
-│     Thompson Sampling + Bonuses     │
-├─────────────────────────────────────┤
-│  • Uncertainty quantification       │
-│  • Recency weighting                │
-│  • Trend detection                  │
-│  • Fairness correction              │
-│  • Creative refresh timing          │
-└─────────────────────────────────────┘
-
-Result: Find winners 3× faster while protecting baseline
-```
-
-</details>
-
----
-
-## 🛠️ Tech Stack
-
-<div align="center">
-
-### Languages & ML
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![PySpark](https://img.shields.io/badge/PySpark-E25A1C?style=flat-square&logo=apache-spark&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white)
-
-### Frameworks
-![XGBoost](https://img.shields.io/badge/XGBoost-337AB7?style=flat-square&logo=xgboost&logoColor=white)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)
-![scikit-learn](https://img.shields.io/badge/sklearn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)
-![Prophet](https://img.shields.io/badge/Prophet-3B5998?style=flat-square&logo=meta&logoColor=white)
-
-### Platforms
-![Databricks](https://img.shields.io/badge/Databricks-FF3621?style=flat-square&logo=databricks&logoColor=white)
-![MLflow](https://img.shields.io/badge/MLflow-0194E2?style=flat-square&logo=mlflow&logoColor=white)
-![Delta Lake](https://img.shields.io/badge/Delta_Lake-00ADD8?style=flat-square&logo=delta&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazon-aws&logoColor=white)
-![GCP](https://img.shields.io/badge/GCP-4285F4?style=flat-square&logo=google-cloud&logoColor=white)
-
-### Methods I Actually Use
-```
-Thompson Sampling · Multi-Armed Bandits · A/B Testing · Causal Inference · Time Series
-```
-
-</div>
-
----
-
-## 📈 The Numbers
-
-<div align="center">
-
-| Metric | Value |
-|:------:|:-----:|
-| 💰 Revenue Impact | **$11M+** |
-| 📊 Daily Impressions | **50M+** |
-| 🎯 Campaigns Managed | **200+** |
-| ⚡ Inference Latency | **<400ms** |
-| 📈 RPS Improvement | **5.86%** |
-| 🚀 Campaign Launch Speed | **3× faster** |
-
-</div>
-
----
-
-## 🕰️ Timeline
-
-```
-2024 ─────────────────────────────────────────────────────────► Present
-  │
-  ├── Ranker ownership (took over from Minion platform)
-  ├── Conversion model → ML-driven bid pricing
-  ├── Thompson Sampling framework
-  ├── Audience Miner 2.0 (Databricks App)
-  └── CI/CD pipeline for model deployment
-
-2022 ─────────────────────────────────────────────────────────► 2024
-  │
-  ├── Click model v1 → v8 (built from scratch)
-  ├── Feature engineering (30+ signals)
-  ├── Session forecasting system
-  └── A/B testing framework (50+ experiments/year)
-
-2018 ─────────────────────────────────────────────────────────► 2022
-  │
-  └── Bed Bath & Beyond
-      ├── Coupon propensity ($2-5M savings)
-      ├── Store trade area analysis (800+ stores)
-      └── Recommendation engine (50M+ transactions)
-```
-
----
-
-## 🧠 Currently Curious About
-
-```diff
-+ LLMs for ML debugging (talking to Claude about misbehaving models)
-+ Feature stores that don't make you cry
-! Whether causal inference can ever be simple (probably not)
-- Overengineered solutions to simple problems (learning to avoid)
-```
-
----
-
-## ☕ Beyond the Terminal
+## · problems i find interesting ·
 
 <table>
 <tr>
-<td align="center" width="33%">
-  
-**Coffee**
+<td width="50%">
 
-```
-   ( (
-    ) )
-  ........
-  |      |]
-  \      /
-   `----'
-```
-Hunting NYC's<br/>best cortado
+### 🎰 exploration vs exploitation
+
+new campaigns have no data. show them and risk revenue, or don't and never learn.
+
+our team uses thompson sampling—balancing this is more art than science.
 
 </td>
-<td align="center" width="33%">
+<td width="50%">
 
-**Film**
+### 🔄 feedback loops
 
-```
-  ┌───────────┐
-  │ ▶ ││ ■ ◄◄ │
-  └───────────┘
-```
-Analyzing narratives<br/>like ML architectures
+today's training data was shaped by yesterday's model. the ads users saw were already filtered.
+
+untangling this is humbling.
 
 </td>
-<td align="center" width="33%">
+</tr>
+<tr>
+<td width="50%">
 
-**Languages**
+### 🧹 boring > clever
 
-```
-  EN ████████░░
-  HI ██████████
-  MR ██████████
-  PY ████████░░
-```
-Does Python count?
+spent weeks on fancy architectures. adding `local_hour_of_day` helped more.
+
+simple features usually win.
+
+</td>
+<td width="50%">
+
+### ⏱️ when to retrain
+
+too often = chasing noise  
+too rarely = drift
+
+still iterating on this.
 
 </td>
 </tr>
 </table>
 
+<br/>
+
+## · currently learning ·
+
+<div align="center">
+
+```
+                    ╭──────────────────────────────────────────╮
+                    │         where my head is at              │
+                    ╰──────────────────────────────────────────╯
+                                       │
+          ┌────────────────────────────┼────────────────────────────┐
+          │                            │                            │
+          ▼                            ▼                            ▼
+   ╭─────────────╮            ╭─────────────╮            ╭─────────────╮
+   │  LLMs &     │            │   Causal    │            │  Online     │
+   │  Gen AI     │            │  Inference  │            │  Learning   │
+   ╰─────────────╯            ╰─────────────╯            ╰─────────────╯
+          │                            │                            │
+          ▼                            ▼                            ▼
+    · prompt eng          · uplift modeling         · contextual bandits
+    · RAG pipelines       · counterfactuals         · continuous adaptation
+    · agents              · beyond A/B tests        · reward shaping
+    · function calling
+```
+
+</div>
+
+<br/>
+
+<details>
+<summary><b>📚 reading & experimenting</b></summary>
+
+<br/>
+
+<table>
+<tr>
+<td width="50%">
+
+**on the nightstand**
+
+```
+◦ designing ml systems
+  chip huyen
+
+◦ causal inference in statistics  
+  judea pearl
+
+◦ bandit algorithms
+  lattimore & szepesvári
+
+◦ papers on llm evaluation
+  & alignment
+```
+
+</td>
+<td width="50%">
+
+**hands-on lately**
+
+```
+◦ langchain / llamaindex
+  for doc retrieval
+
+◦ claude api
+  for workflow tools
+
+◦ llm-assisted debugging
+  (asking ai why my model broke)
+
+◦ small rag experiments
+  on internal docs
+```
+
+</td>
+</tr>
+</table>
+
+</details>
+
+<br/>
+
+## · lessons learned ·
+
+<details>
+<summary><b>on features</b></summary>
+
+<br/>
+
+```
+    ✓ worked                              ✗ didn't
+    ─────────────────────────             ─────────────────────────
+    position (1 vs 4 is huge)             day of week (too noisy)
+    local hour (not utc!)                 exact age (buckets better)
+    campaign recency signals              most third-party enrichment
+    state-level geo                       zip code (too sparse)
+```
+
+</details>
+
+<details>
+<summary><b>on systems</b></summary>
+
+<br/>
+
+```
+    ◦ simple models + good features  >  complex models + mediocre features
+    ◦ logging is the actual hard part
+    ◦ "works on my machine" is a lifestyle
+    ◦ most ml problems are data problems wearing a trench coat
+```
+
+</details>
+
+<details>
+<summary><b>on learning</b></summary>
+
+<br/>
+
+```
+    ◦ reading papers is good, implementing is better
+    ◦ the tutorial → production gap is where learning happens  
+    ◦ explaining simply = understanding deeply
+    ◦ staying curious > staying current
+```
+
+</details>
+
+<br/>
+
+## · tools ·
+
+<div align="center">
+
+<br/>
+
+`python` · `pyspark` · `sql` · `xgboost` · `databricks` · `mlflow`
+
+<br/>
+
+<sub>exploring: `langchain` · `huggingface` · `anthropic/openai apis`</sub>
+
+<br/>
+
+</div>
+
+<br/>
+
+## · background ·
+
+```
+now         ╭────────────────────────────────────────────╮
+  │         │  fluent · data scientist                   │
+  │         │  ad ranking · exploration · ml systems     │
+  │         ╰────────────────────────────────────────────╯
+  │
+  │         ╭────────────────────────────────────────────╮
+2022        │  bed bath & beyond · data scientist        │
+  │         │  targeting · store analytics · recs        │
+  │         ╰────────────────────────────────────────────╯
+  │
+2018        ╭────────────────────────────────────────────╮
+            │  stevens institute · ms information systems│
+            ╰────────────────────────────────────────────╯
+```
+
+<br/>
+
+## · outside work ·
+
+<div align="center">
+
+<table>
+<tr>
+<td align="center">
+<br/>
+☕<br/>
+<sub>coffee</sub><br/>
+<sub><sup>still chasing the</sup></sub><br/>
+<sub><sup>perfect cortado</sup></sub>
+<br/><br/>
+</td>
+<td align="center">
+<br/>
+🎬<br/>
+<sub>films</sub><br/>
+<sub><sup>narrative structure</sup></sub><br/>
+<sub><sup>is just architecture</sup></sub>
+<br/><br/>
+</td>
+<td align="center">
+<br/>
+📚<br/>
+<sub>reading</sub><br/>
+<sub><sup>ml papers, sci-fi,</sup></sub><br/>
+<sub><sup>occasional philosophy</sup></sub>
+<br/><br/>
+</td>
+<td align="center">
+<br/>
+🎤<br/>
+<sub>singing</sub><br/>
+<sub><sup>badly, but</sup></sub><br/>
+<sub><sup>enthusiastically</sup></sub>
+<br/><br/>
+</td>
+<td align="center">
+<br/>
+🗣️<br/>
+<sub>languages</sub><br/>
+<sub><sup>english · hindi</sup></sub><br/>
+<sub><sup>marathi</sup></sub>
+<br/><br/>
+</td>
+</tr>
+</table>
+
+</div>
+
+<br/>
+
 ---
 
 <div align="center">
 
-### Let's Talk
-
-*Interested in production ML, exploration-exploitation tradeoffs,*
-*or why your model works in staging but fails in prod.*
-
-*Also coffee.*
-
----
-
-<sub>If you're here from a recruiter search: yes, I know what a p-value is. No, I won't use one incorrectly.</sub>
+<sub>happy to chat about ranking systems, bandits, llms, or coffee</sub>
 
 </div>
