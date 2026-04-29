@@ -2,11 +2,9 @@
 
 <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=500&size=24&pause=1000&color=6B7280&center=true&vCenter=true&random=false&width=435&lines=tanmay+sinnarkar" alt="name" />
 
-**data scientist · nyc**
+**senior data scientist · nyc**
 
-*ranking systems · exploration problems · ml in production*
-
-<br/>
+*ranking · audience optimization · ml in production*
 
 [<img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" height="25"/>](https://www.linkedin.com/in/tanmay-sinnarkar/)
 &nbsp;
@@ -23,27 +21,31 @@
 <td width="55%">
 
 ```
-    user finishes checkout
-             │
-             ▼
-    ╭─────────────────╮
-    │  which ad next? │
-    ╰─────────────────╯
-             │
-             ▼
-    somewhere here, our
-    ranking system runs
-             │
-             ▼
-    (harder than it sounds)
+   user completes a transaction
+              │
+              ▼
+       ranker fires
+              │
+   ┌──────────┼──────────┐
+   ▼          ▼          ▼
+  pCTR    bid scale   diversity
+  model   + segments   overrides
+   │          │          │
+   └──────────┼──────────┘
+              ▼
+       impression served
+              │
+              ▼
+       (we learn from
+        what happens)
 ```
 
 </td>
 <td width="45%">
 
-Ad ranking for post-transaction placements.
+ranking and audience systems for post-transaction ad placements at fluent.
 
-The interesting part isn't predicting clicks—it's everything around it: exploration vs exploitation, feedback loops, knowing when to retrain.
+the interesting part isn't predicting clicks — it's the loop around it. exploration vs. exploitation, keeping the ranker from collapsing into a few advertisers, figuring out what a placement is worth when the training data was shaped by yesterday's model.
 
 </td>
 </tr>
@@ -51,47 +53,34 @@ The interesting part isn't predicting clicks—it's everything around it: explor
 
 <br/>
 
-## · problems i find interesting ·
+## · what i've built ·
 
 <table>
 <tr>
 <td width="50%">
 
-### 🎰 exploration vs exploitation
-
-new campaigns have no data. show them and risk revenue, or don't and never learn.
-
-our team uses thompson sampling—balancing this is more art than science.
+### audience miner
+fluent's first databricks app. decision trees over 87 experian attributes → converting segments + calibrated bids. day-long workflow → minutes. now wraps a llama 3.3 agent with a sql tool layer.
 
 </td>
 <td width="50%">
 
-### 🔄 feedback loops
-
-today's training data was shaped by yesterday's model. the ads users saw were already filtered.
-
-untangling this is humbling.
+### diversity engine
+post-ranker override system. structured exposure for non-tier-1 campaigns without bleeding revenue. position tolerances, segment-level quality gates, mlflow artifact loading.
 
 </td>
 </tr>
 <tr>
 <td width="50%">
 
-### 🧹 boring > clever
-
-spent weeks on fancy architectures. adding `local_hour_of_day` helped more.
-
-simple features usually win.
+### structural risk dashboard
+15+ queries collapsed into one cte-based master query. tracks rpi distance, bid density, and tier-1 concentration with thresholds by placement.
 
 </td>
 <td width="50%">
 
-### ⏱️ when to retrain
-
-too often = chasing noise  
-too rarely = drift
-
-still iterating on this.
+### dynamic lookback v2
+24 → 59 features in the click ranker. latency was the gate, not accuracy. held to 1.24× v1 baseline (p50 86ms).
 
 </td>
 </tr>
@@ -99,147 +88,61 @@ still iterating on this.
 
 <br/>
 
-## · currently learning ·
-
-<div align="center">
-
-```
-                    ╭──────────────────────────────────────────╮
-                    │         where my head is at              │
-                    ╰──────────────────────────────────────────╯
-                                       │
-          ┌────────────────────────────┼────────────────────────────┐
-          │                            │                            │
-          ▼                            ▼                            ▼
-   ╭─────────────╮            ╭─────────────╮            ╭─────────────╮
-   │  LLMs &     │            │   Causal    │            │  Online     │
-   │  Gen AI     │            │  Inference  │            │  Learning   │
-   ╰─────────────╯            ╰─────────────╯            ╰─────────────╯
-          │                            │                            │
-          ▼                            ▼                            ▼
-    · prompt eng          · uplift modeling         · contextual bandits
-    · RAG pipelines       · counterfactuals         · continuous adaptation
-    · agents              · beyond A/B tests        · reward shaping
-    · function calling
-```
-
-</div>
-
-<br/>
-
-<details>
-<summary><b>📚 reading & experimenting</b></summary>
-
-<br/>
+## · interests ·
 
 <table>
 <tr>
 <td width="50%">
 
-**on the nightstand**
-
-```
-◦ designing ml systems
-  chip huyen
-
-◦ causal inference in statistics  
-  judea pearl
-
-◦ bandit algorithms
-  lattimore & szepesvári
-
-◦ papers on llm evaluation
-  & alignment
-```
+### exploration vs exploitation
+new campaigns have no data. setting the exploration *budget* — and measuring whether it's paying off — is the hard part.
 
 </td>
 <td width="50%">
 
-**hands-on lately**
+### feedback loops
+training data was filtered by yesterday's model. features look stationary; the distribution isn't.
 
-```
-◦ langchain / llamaindex
-  for doc retrieval
+</td>
+</tr>
+<tr>
+<td width="50%">
 
-◦ claude api
-  for workflow tools
+### calibration > cleverness
+well-calibrated model + thoughtful features beats complex model + mediocre inputs. `local_hour` (not utc) helped more than most architecture changes.
 
-◦ llm-assisted debugging
-  (asking ai why my model broke)
+</td>
+<td width="50%">
 
-◦ small rag experiments
-  on internal docs
-```
+### structural limits
+when one `bid_scale` compresses bids globally, per-segment pricing isn't really achievable without model-level changes.
 
 </td>
 </tr>
 </table>
 
-</details>
-
 <br/>
 
-## · lessons learned ·
-
-<details>
-<summary><b>on features</b></summary>
-
-<br/>
-
-```
-    ✓ worked                              ✗ didn't
-    ─────────────────────────             ─────────────────────────
-    position (1 vs 4 is huge)             day of week (too noisy)
-    local hour (not utc!)                 exact age (buckets better)
-    campaign recency signals              most third-party enrichment
-    state-level geo                       zip code (too sparse)
-```
-
-</details>
-
-<details>
-<summary><b>on systems</b></summary>
-
-<br/>
-
-```
-    ◦ simple models + good features  >  complex models + mediocre features
-    ◦ logging is the actual hard part
-    ◦ "works on my machine" is a lifestyle
-    ◦ most ml problems are data problems wearing a trench coat
-```
-
-</details>
-
-<details>
-<summary><b>on learning</b></summary>
-
-<br/>
-
-```
-    ◦ reading papers is good, implementing is better
-    ◦ the tutorial → production gap is where learning happens  
-    ◦ explaining simply = understanding deeply
-    ◦ staying curious > staying current
-```
-
-</details>
-
-<br/>
-
-## · tools ·
+## · stack ·
 
 <div align="center">
 
-<br/>
+<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" height="28"/>
+<img src="https://img.shields.io/badge/Apache%20Spark-E25A1C?style=for-the-badge&logo=apachespark&logoColor=white" height="28"/>
+<img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white" height="28"/>
+<img src="https://img.shields.io/badge/Databricks-FF3621?style=for-the-badge&logo=databricks&logoColor=white" height="28"/>
+<img src="https://img.shields.io/badge/Delta%20Lake-00ADD4?style=for-the-badge&logo=delta&logoColor=white" height="28"/>
+<img src="https://img.shields.io/badge/MLflow-0194E2?style=for-the-badge&logo=mlflow&logoColor=white" height="28"/>
+<img src="https://img.shields.io/badge/XGBoost-006ACC?style=for-the-badge&logo=scikitlearn&logoColor=white" height="28"/>
+<img src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" height="28"/>
 
-`python` · `pyspark` · `sql` · `xgboost` · `databricks` · `mlflow`
+<br/><br/>
 
-<br/>
+<sub>exploring</sub>
 
-<sub>exploring: `langchain` · `huggingface` · `anthropic/openai apis`</sub>
-
-<br/>
+<img src="https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white" height="24"/>
+<img src="https://img.shields.io/badge/Anthropic%20API-D97757?style=for-the-badge&logo=anthropic&logoColor=white" height="24"/>
+<img src="https://img.shields.io/badge/Hugging%20Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black" height="24"/>
 
 </div>
 
@@ -248,19 +151,14 @@ still iterating on this.
 ## · background ·
 
 ```
-now         ╭────────────────────────────────────────────╮
-  │         │  fluent · data scientist                   │
-  │         │  ad ranking · exploration · ml systems     │
-  │         ╰────────────────────────────────────────────╯
-  │
-  │         ╭────────────────────────────────────────────╮
-2022        │  bed bath & beyond · data scientist        │
-  │         │  targeting · store analytics · recs        │
-  │         ╰────────────────────────────────────────────╯
-  │
-2018        ╭────────────────────────────────────────────╮
-            │  stevens institute · ms information systems│
-            ╰────────────────────────────────────────────╯
+now    fluent · senior data scientist
+       adflow commerce media · ranking, audience, ml systems
+
+2022   bed bath & beyond · data scientist
+       targeting, store analytics, recommendations
+
+2018   stevens institute of technology · ms, information systems
+       university of pune · be, computer science
 ```
 
 <br/>
@@ -269,50 +167,7 @@ now         ╭─────────────────────�
 
 <div align="center">
 
-<table>
-<tr>
-<td align="center">
-<br/>
-☕<br/>
-<sub>coffee</sub><br/>
-<sub><sup>still chasing the</sup></sub><br/>
-<sub><sup>perfect cortado</sup></sub>
-<br/><br/>
-</td>
-<td align="center">
-<br/>
-🎬<br/>
-<sub>films</sub><br/>
-<sub><sup>narrative structure</sup></sub><br/>
-<sub><sup>is just architecture</sup></sub>
-<br/><br/>
-</td>
-<td align="center">
-<br/>
-📚<br/>
-<sub>reading</sub><br/>
-<sub><sup>ml papers, sci-fi,</sup></sub><br/>
-<sub><sup>occasional philosophy</sup></sub>
-<br/><br/>
-</td>
-<td align="center">
-<br/>
-🎤<br/>
-<sub>singing</sub><br/>
-<sub><sup>badly, but</sup></sub><br/>
-<sub><sup>enthusiastically</sup></sub>
-<br/><br/>
-</td>
-<td align="center">
-<br/>
-🗣️<br/>
-<sub>languages</sub><br/>
-<sub><sup>english · hindi</sup></sub><br/>
-<sub><sup>marathi</sup></sub>
-<br/><br/>
-</td>
-</tr>
-</table>
+coffee · films · book club · english / hindi / marathi
 
 </div>
 
@@ -322,6 +177,6 @@ now         ╭─────────────────────�
 
 <div align="center">
 
-<sub>happy to chat about ranking systems, bandits, llms, or coffee</sub>
+<sub>happy to talk ranking systems, bandits, or llms in production.</sub>
 
 </div>
